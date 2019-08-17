@@ -239,6 +239,7 @@
   "book_now book_now book_now"
   "social1 social2 social3"
   "nav nav nav"
+  "address address address"
   "map map map"
   "exte exte parking"
   "hours hours hours"
@@ -254,6 +255,7 @@
     grid-template-areas:
     "logo logo book_now social1 social2 social3"
     "nav nav nav nav nav nav"
+    "address address address address address address" 
     "map map map map exte exte"
     "hours hours hours parking parking parking"
     "bottom_banner bottom_banner bottom_banner bottom_banner bottom_banner bottom_banner"
@@ -268,6 +270,7 @@
     grid-template-areas:
     "logo logo logo logo book_now book_now book_now social1 social2 social3"
     "nav nav nav nav nav nav nav nav nav nav"
+    "address address address address address address address address address address"
     "map map map map map map map map exte exte"
     "hours hours hours hours hours parking parking parking parking parking"
     "bottom_banner bottom_banner bottom_banner bottom_banner bottom_banner bottom_banner bottom_banner bottom_banner bottom_banner bottom_banner"
@@ -288,6 +291,7 @@
 .grid_contact .item:nth-child(11) { grid-area: bottom_banner; }
 .grid_contact .item:nth-child(12) { grid-area: footer1; }
 .grid_contact .item:nth-child(13) { grid-area: footer2; }
+.grid_contact .item:nth-child(14) { grid-area: address; }
 
 
 /* global text format*/
@@ -301,7 +305,7 @@ h2 {
   color: rgb(214, 60, 126);
   font-weight: bolder;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
 h3 {
@@ -351,18 +355,14 @@ h4 {
 
 /*table formating */
 table {
-  display: flex;
-  justify-content: center;
-  
-  width: 100%;
-  
+  width: 80%;
+  margin: auto;  
+}
+th {
+  text-align: center;
 }
 
-tr, td {
-  width: 80%;
-  padding: 0rem;
-  }
-}
+
 
 
 /* book now button formatting */
@@ -370,12 +370,12 @@ tr, td {
 .button-home {
       background-color: rgb(15, 127, 127);
       color: white;
-      padding: 1rem 1rem;
+      padding: .5rem .5rem;
       border-radius: 8px;
       font-size: 1rem;
       margin-left:auto;
       margin-right:auto;
-      width: 90%;
+      
 
     }
 
@@ -435,6 +435,7 @@ tr, td {
   width: 50%;
   margin-left:auto;
   margin-right:auto;
+  padding: 1rem;
  
 }
 
@@ -442,6 +443,16 @@ tr, td {
   display: flex;
   justify-content: center;
   width: 60%;
+  margin-left:auto;
+  margin-right:auto;
+  padding: .25rem;
+  
+}
+
+.social-l360 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   margin-left:auto;
   margin-right:auto;
   
@@ -453,8 +464,16 @@ img {
   border-radius: 10px;
 }
 
-.product-logo {
-  width: 35%;
+
+
+.logo-product-image {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
 }
 
 .headshot {
@@ -478,14 +497,16 @@ img {
   width: 100%;
   margin-left:auto;
   margin-right:auto;
+  padding: 2rem;
 }
 
 .review_sources {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: auto;
   justify-content: center;
-  width:50%;
-  margin-left:auto;
-  margin-right:auto;
+  align-items: center;
 }
 
 /*about image format*/
